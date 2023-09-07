@@ -1,0 +1,101 @@
+Last login: Wed Aug 30 16:21:55 on ttys000
+(base) ellaglebe@cu-engr2-1-15-10 ~ % python3
+Python 3.8.8 (default, Apr 13 2021, 12:59:45) 
+[Clang 10.0.0 ] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> #3.1
+>>> x = [1,2,3]
+>>> x*3
+[1, 2, 3, 1, 2, 3, 1, 2, 3]
+>>> import numpy as np
+>>> y = np.array([1,2,3])
+>>> y*3
+array([3, 6, 9])
+>>> #3.1.2
+>>> print('This is 3y', 3*y)
+This is 3y [3 6 9]
+>>> import matplotlib.pyplot as plt
+>>> X = np.linspace(0, 2 *np.pi,100)
+>>> Ya = np.sin(X)
+>>> Yb = np.cos(X)
+>>> 
+>>> ply.plot(X, Ya)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'ply' is not defined
+>>> plt.plot(X,Ya)
+[<matplotlib.lines.Line2D object at 0x7f9d60be3ac0>]
+>>> plt.plot(X, Yb)
+[<matplotlib.lines.Line2D object at 0x7f9d60be3e20>]
+>>> plt.show()
+#The size of X is 100 since it is 100 linearly spaced points between 0 and 2pi 
+X = np.linspace(0, 2 * np.pi, 100)
+Ya = np.sin(X)
+Yb = np.cos(X)
+plt.plot(X, Ya)
+plt.plot(X, Yb)
+plt.xlabel(’x’)
+plt.ylabel(’y’)
+plt.show()
+>>> #The size of X is 100 since it is 100 linearly spaced points between 0 and 2pi
+>>> X = np.linspace(0, 2 * np.pi, 100)
+>>> Ya = np.sin(X)
+>>> Yb = np.cos(X)
+>>> plt.plot(X, Ya)
+[<matplotlib.lines.Line2D object at 0x7f9d633717f0>]
+>>> plt.plot(X, Yb)
+[<matplotlib.lines.Line2D object at 0x7f9d63371b50>]
+>>> plt.xlabel(’x’)
+  File "<stdin>", line 1
+    plt.xlabel(’x’)
+                 ^
+SyntaxError: invalid character in identifier
+>>> plt.ylabel(’y’)
+  File "<stdin>", line 1
+    plt.ylabel(’y’)
+                 ^
+SyntaxError: invalid character in identifier
+>>> plt.show()
+>>> X = np.linspace(0, 2 * np.pi, 100)
+>>> Ya = np.sin(X)
+>>> Yb = np.cos(X)
+>>> plt.plot(X, Ya)
+[<matplotlib.lines.Line2D object at 0x7f9d633db6a0>]
+>>> plt.plot(X, Yb)
+[<matplotlib.lines.Line2D object at 0x7f9d633dba00>]
+>>> plt.xlabel('x')
+Text(0.5, 0, 'x')
+>>> plt.ylabel('y')
+Text(0, 0.5, 'y')
+>>> plt.show()
+>>> #3.2
+>>> #1
+>>> x = np.linspace(0, 1, 100)
+>>> y = np.array(0, 1, 100)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: array() takes from 1 to 2 positional arguments but 3 were given
+>>> y = np.arrage(0, 1, 0.1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/numpy/__init__.py", line 303, in __getattr__
+    raise AttributeError("module {!r} has no attribute "
+AttributeError: module 'numpy' has no attribute 'arrage'
+>>> y = np.arange(0, 1, 0.01)
+>>> #2
+>>> x[:3]
+array([0.        , 0.01010101, 0.02020202])
+>>> print('The first three entries of x are', x[:3)
+  File "<stdin>", line 1
+    print('The first three entries of x are', x[:3)
+                                                  ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '['
+>>> print('The first three entries of x are', x[:3])
+The first three entries of x are [0.         0.01010101 0.02020202]
+>>> w = 10**(-np.linspace(1,10,10))
+>>> # the entries of w are steps from 1 to 10 getting smaller since it's 10^-x
+>>> x = np.arange (1,11,1)
+>>> plt.semilogy(x,w)
+[<matplotlib.lines.Line2D object at 0x7f9d65753160>]
+>>> plt.show()
+>>> 
