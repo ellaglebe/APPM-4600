@@ -4,13 +4,22 @@ import numpy as np
 def driver():
 
 # use routines    
-    f = lambda x: x**3+x-4
-    a = 1
-    b = 4
+    f = lambda x: np.sin(x)
+    a = 0.5
+    b = 3*np.pi/4
 
-#    f = lambda x: np.sin(x)
-#    a = 0.1
-#    b = np.pi+0.1
+#    1) For the first and last intervals there was sucess
+#    this makes sence because the intervals contain x=1 which is a root.
+#    For the second interval the roots are at x = and x =0
+#    since x =1 is outside the interval it won't pick up the x =1 interval and
+#    when x =0 f(a)*f(b) won't change signs it will just be zero so it can't pick
+#    up the root
+
+
+#    2) No because the last root for sin(x) is at x =0 and it didn't give an error
+#    message, but we were expecting b) to give a root 1 since it's in the interval, but it gave
+#    the root as zero and an error message it could be due to the squared on the (x-1)
+
 
     tol = 1e-7
 

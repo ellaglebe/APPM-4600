@@ -1,0 +1,48 @@
+Last login: Thu Sep 14 10:23:55 on ttys000
+(base) ellaglebe@MacBook-Pro-83 ~ % cd /Users/ellaglebe/Downloads/APPM-4600/Labs/Lab3
+(base) ellaglebe@MacBook-Pro-83 Lab3 % python3 bisection_example.py
+the approximate root is 1.3787966668605804
+the error message reads: 0
+f(astar) = -2.230099225286608e-07
+(base) ellaglebe@MacBook-Pro-83 Lab3 % # above was an inital run
+zsh: command not found: #
+(base) ellaglebe@MacBook-Pro-83 Lab3 % python3 bisection_example.py
+the approximate root is 0.9999999701976776
+the error message reads: 0
+f(astar) = -2.98023206113385e-08
+(base) ellaglebe@MacBook-Pro-83 Lab3 % python3 bisection_example.py
+the approximate root is -1
+the error message reads: 1
+f(astar) = -2
+(base) ellaglebe@MacBook-Pro-83 Lab3 % python3 bisection_example.py
+the approximate root is 0.9999999701976776
+the error message reads: 0
+f(astar) = -2.98023206113385e-08
+(base) ellaglebe@MacBook-Pro-83 Lab3 % python3 bisection_example.py
+the approximate root is 0.999999976158142
+the error message reads: 0
+f(astar) = -1.9073486775766932e-07
+(base) ellaglebe@MacBook-Pro-83 Lab3 % python3 bisection_example.py
+the approximate root is 0
+the error message reads: 1
+f(astar) = -3
+(base) ellaglebe@MacBook-Pro-83 Lab3 % python3 bisection_example.py
+Traceback (most recent call last):
+  File "bisection_example.py", line 83, in <module>
+    driver()               
+  File "bisection_example.py", line 21, in driver
+    [astar,ier] = bisection(f,a,b,tol)
+  File "bisection_example.py", line 44, in bisection
+    fa = f(a)
+  File "bisection_example.py", line 7, in <lambda>
+    f = lambda x: sin(x)
+NameError: name 'sin' is not defined
+(base) ellaglebe@MacBook-Pro-83 Lab3 % python3 bisection_example.py
+the approximate root is 0
+the error message reads: 0
+f(astar) = 0.0
+(base) ellaglebe@MacBook-Pro-83 Lab3 % python3 bisection_example.py
+the approximate root is 0.5
+the error message reads: 1
+f(astar) = 0.479425538604203
+(base) ellaglebe@MacBook-Pro-83 Lab3 % 
