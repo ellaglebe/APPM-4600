@@ -1,0 +1,70 @@
+Last login: Thu Sep 14 11:25:31 on ttys000
+(base) ellaglebe@econ1-156-72-dhcp ~ % python3
+Python 3.8.8 (default, Apr 13 2021, 12:59:45) 
+[Clang 10.0.0 ] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import numpy as np
+>>> import matplotlib.pyplot as plt
+>>> t = np.arange(0,np.pi,np.pi/30)
+>>> y = np.cos(t)
+>>> k = 0
+>>> n = 29
+>>> S = 0
+>>> while k <= n:
+...     S += t[k]*y[k]
+...     k+= 1
+... 
+>>> print("the sum is:", S)
+the sum is: -17.545259710757048
+>>> # Question 4 part b
+>>> theta = np.linspace(0,2*np.pi,100)
+>>> len(theta)
+100
+>>> R = 1.2
+>>> dr = 0.1
+>>> f = 15
+>>> p = 0
+>>> x = R*(1+dr*np.sin(f*theta+p))*np.cos(thta)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'thta' is not defined
+>>> x = R*(1+dr*np.sin(f*theta+p))*np.cos(theta)
+>>> y = R*(1+dr*np.sin(f*theta+p))*np.sin(theta)
+>>> plt.plot(x,y)
+[<matplotlib.lines.Line2D object at 0x7fdcc8820ac0>]
+>>> plt.xlabel('x')
+Text(0.5, 0, 'x')
+>>> plt.ylabel('y')
+Text(0, 0.5, 'y')
+>>> plt.title('Wavy Circles')
+Text(0.5, 1.0, 'Wavy Circles')
+>>> plt.show()
+>>> for i in range(0,11):
+...     dr = 0.1
+...     R = i
+...     f = 2+i
+...     p = np.random.uniform(0,2)
+...     theta = np.linspace(0,2*np.pi,100)
+...     x = R*(1+dr*np.sin(f*theta+p))*np.cos(theta)
+...     y = R*(1+dr*np.sin(f*theta+p))*np.sin(theta)
+...     plt.plot(x,y)
+... 
+[<matplotlib.lines.Line2D object at 0x7fdcc8fdab20>]
+[<matplotlib.lines.Line2D object at 0x7fdcc8fdae80>]
+[<matplotlib.lines.Line2D object at 0x7fdccb2b3220>]
+[<matplotlib.lines.Line2D object at 0x7fdccb2b3580>]
+[<matplotlib.lines.Line2D object at 0x7fdccb2b38e0>]
+[<matplotlib.lines.Line2D object at 0x7fdccb2b3c40>]
+[<matplotlib.lines.Line2D object at 0x7fdccb2b3fa0>]
+[<matplotlib.lines.Line2D object at 0x7fdccb2bf340>]
+[<matplotlib.lines.Line2D object at 0x7fdccb2bf6a0>]
+[<matplotlib.lines.Line2D object at 0x7fdccb2bfa00>]
+[<matplotlib.lines.Line2D object at 0x7fdcc8fb8d60>]
+>>> plt.xlabel('x')
+Text(0.5, 0, 'x')
+>>> plt.ylabel('y')
+Text(0, 0.5, 'y')
+>>> plt.title('All Wavy Circles')
+Text(0.5, 1.0, 'All Wavy Circles')
+>>> plt.show()
+>>> 
