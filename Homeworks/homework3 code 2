@@ -1,0 +1,23 @@
+Last login: Mon Sep 18 14:49:07 on ttys000
+(base) ellaglebe@MacBook-Pro-83 ~ % cd /Users/ellaglebe/Downloads/APPM-4600/Homeworks/Homework3
+(base) ellaglebe@MacBook-Pro-83 Homework3 % python3 bisection_3.py
+count is 1
+count is 2
+count is 3
+count is 4
+count is 5
+count is 6
+count is 7
+count is 8
+count is 9
+count is 10
+count is 11
+the approximate root is 1.378662109375
+the error message reads: 0
+f(astar) = -0.0009021193400258198
+(base) ellaglebe@MacBook-Pro-83 Homework3 % python3 bisection_3.py
+count is 11
+the approximate root is 1.378662109375
+the error message reads: 0
+f(astar) = -0.0009021193400258198
+(base) ellaglebe@MacBook-Pro-83 Homework3 % 
