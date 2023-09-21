@@ -1,0 +1,386 @@
+Last login: Wed Sep 20 14:32:18 on ttys000
+(base) ellaglebe@cu-engr2-1-15-10 ~ % cd /Users/ellaglebe/Downloads/APPM-4600/Labs/Lab4
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % git commit -a -m"prelab4"
+[main 9f974ca] prelab4
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % git push
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 795 bytes | 795.00 KiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:ellaglebe/APPM-4600.git
+   377c88d..9f974ca  main -> main
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % cd /Users/ellaglebe/Downloads/APPM-4600/Labs/Lab4
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py                    
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+Traceback (most recent call last):
+  File "Aitkens.py", line 76, in <module>
+    driver()
+  File "Aitkens.py", line 18, in driver
+    [avec, count1] = aitkens(vec)
+UnboundLocalError: local variable 'vec' referenced before assignment
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % [avec, count1] = aitkens(vec)
+zsh: bad pattern: [avec,
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % [avec, count1] = aitkens(vec)
+zsh: bad pattern: [avec,
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % [avec, count1] = aitkens(vec)
+zsh: bad pattern: [avec,
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % [avec, count1] = aitkens(vec)
+zsh: bad pattern: [avec,
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+Traceback (most recent call last):
+  File "Aitkens.py", line 75, in <module>
+    driver()
+  File "Aitkens.py", line 22, in driver
+    print(avec)
+NameError: name 'avec' is not defined
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+Traceback (most recent call last):
+  File "Aitkens.py", line 75, in <module>
+    driver()
+  File "Aitkens.py", line 22, in driver
+    print(avec)
+NameError: name 'avec' is not defined
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % git commit -a -m"lab4"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../../.DS_Store
+	../../Homeworks/Homework3/Figure_1.png
+	../../Homeworks/Homework3/fixedpt_example.py
+	./
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % git add *
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % git commit -a -m"lab4"
+[main 94f7062] lab4
+ 2 files changed, 150 insertions(+)
+ create mode 100644 Labs/Lab4/Aitkens.py
+ create mode 100644 Labs/Lab4/fixedpt_4.py
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.17 KiB | 1.17 MiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To github.com:ellaglebe/APPM-4600.git
+   9f974ca..94f7062  main -> main
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+Traceback (most recent call last):
+  File "Aitkens.py", line 82, in <module>
+    driver()
+  File "Aitkens.py", line 19, in driver
+    [avec, count1] = aitkens(vec, tol)
+  File "Aitkens.py", line 74, in aitkens
+    if (abs(avec[i+1]-avec[i]) <tol):
+IndexError: list index out of range
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+1
+Traceback (most recent call last):
+  File "Aitkens.py", line 79, in <module>
+    driver()
+  File "Aitkens.py", line 19, in driver
+    [avec, count1] = aitkens(vec, tol)
+ValueError: not enough values to unpack (expected 2, got 1)
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+1
+Traceback (most recent call last):
+  File "Aitkens.py", line 78, in <module>
+    driver()
+  File "Aitkens.py", line 19, in driver
+    [avec, count1] = aitkens(vec)
+ValueError: not enough values to unpack (expected 2, got 1)
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+1
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Traceback (most recent call last):
+  File "Aitkens.py", line 78, in <module>
+    driver()
+  File "Aitkens.py", line 19, in driver
+    [avec, count1] = aitkens(vec)
+  File "Aitkens.py", line 71, in aitkens
+    denom = (vec[i+2]-2*vec[i+1]+vec[i])
+IndexError: index 12 is out of bounds for axis 0 with size 12
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % print(count1)
+zsh: number expected
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+1
+[1.3652652239572602]
+2
+[1.3652652239572602, 1.3652305845417765]
+3
+[1.3652652239572602, 1.3652305845417765, 1.3652300226567435]
+4
+[1.3652652239572602, 1.3652305845417765, 1.3652300226567435, 1.3652300135637154]
+5
+[1.3652652239572602, 1.3652305845417765, 1.3652300226567435, 1.3652300135637154, 1.3652300134165187]
+6
+[1.3652652239572602, 1.3652305845417765, 1.3652300226567435, 1.3652300135637154, 1.3652300134165187, 1.365230013414136]
+7
+[1.3652652239572602, 1.3652305845417765, 1.3652300226567435, 1.3652300135637154, 1.3652300134165187, 1.365230013414136, 1.3652300134140976]
+8
+[1.3652652239572602, 1.3652305845417765, 1.3652300226567435, 1.3652300135637154, 1.3652300134165187, 1.365230013414136, 1.3652300134140976, 1.3652300134140969]
+9
+[1.3652652239572602, 1.3652305845417765, 1.3652300226567435, 1.3652300135637154, 1.3652300134165187, 1.365230013414136, 1.3652300134140976, 1.3652300134140969, 1.3652300134140969]
+10
+[1.3652652239572602, 1.3652305845417765, 1.3652300226567435, 1.3652300135637154, 1.3652300134165187, 1.365230013414136, 1.3652300134140976, 1.3652300134140969, 1.3652300134140969, 1.3652300134140969]
+Traceback (most recent call last):
+  File "Aitkens.py", line 77, in <module>
+    driver()
+  File "Aitkens.py", line 19, in driver
+    [avec, count1] = aitkens(vec)
+TypeError: cannot unpack non-iterable NoneType object
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+[1.3652652239572602, 1.3652305845417765, 1.3652300226567435, 1.3652300135637154, 1.3652300134165187, 1.365230013414136, 1.3652300134140976, 1.3652300134140969, 1.3652300134140969, 1.3652300134140969]
+10
+Traceback (most recent call last):
+  File "Aitkens.py", line 77, in <module>
+    driver()
+  File "Aitkens.py", line 19, in driver
+    [avec, count1] = aitkens(vec)
+TypeError: cannot unpack non-iterable NoneType object
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+Traceback (most recent call last):
+  File "Aitkens.py", line 77, in <module>
+    driver()
+  File "Aitkens.py", line 19, in driver
+    [avec, count1] = aitkens(vec)
+  File "Aitkens.py", line 71, in aitkens
+    denom = (vec[i+2]-2*vec[i+1]+vec[i])
+IndexError: index 12 is out of bounds for axis 0 with size 12
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+Traceback (most recent call last):
+  File "Aitkens.py", line 77, in <module>
+    driver()
+  File "Aitkens.py", line 19, in driver
+    [avec, count1] = aitkens(vec)
+  File "Aitkens.py", line 71, in aitkens
+    denom = (vec[i+2]-2*vec[i+1]+vec[i])
+IndexError: index 12 is out of bounds for axis 0 with size 12
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+[1.3652652239572602, 1.3652305845417765, 1.3652300226567435, 1.3652300135637154, 1.3652300134165187, 1.365230013414136, 1.3652300134140976, 1.3652300134140969, 1.3652300134140969, 1.3652300134140969]
+10
+Traceback (most recent call last):
+  File "Aitkens.py", line 77, in <module>
+    driver()
+  File "Aitkens.py", line 19, in driver
+    [avec, count1] = aitkens(vec)
+TypeError: cannot unpack non-iterable NoneType object
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+  File "Aitkens.py", line 67
+    avec      count1 = 0
+              ^
+SyntaxError: invalid syntax
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+[1.3652652239572602, 1.3652305845417765, 1.3652300226567435, 1.3652300135637154, 1.3652300134165187, 1.365230013414136, 1.3652300134140976, 1.3652300134140969, 1.3652300134140969, 1.3652300134140969]
+10
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % [avec, count1] = aitkens(vec)
+zsh: bad pattern: [avec,
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+Traceback (most recent call last):
+  File "Aitkens.py", line 78, in <module>
+    driver()
+  File "Aitkens.py", line 19, in driver
+    [avec] = aitkens(vec)
+  File "Aitkens.py", line 71, in aitkens
+    denom = (vec[i+2]-2*vec[i+1]+vec[i])
+IndexError: index 12 is out of bounds for axis 0 with size 12
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % python3 Aitkens.py
+12
+[1.3652652239572602, 1.3652305845417765, 1.3652300226567435, 1.3652300135637154, 1.3652300134165187, 1.365230013414136, 1.3652300134140976, 1.3652300134140969, 1.3652300134140969, 1.3652300134140969]
+10
+the approximate fixed point is: 1.3652300134164816
+f1(xstar): 1.3652300134137934
+[1.5        1.34839972 1.36737637 1.36495702 1.36526475 1.36522559
+ 1.36523058 1.36522994 1.36523002 1.36523001 1.36523001 1.36523001]
+0.1271839945037372
+Error message reads: 0
+(base) ellaglebe@cu-engr2-1-15-10 Lab4 % 

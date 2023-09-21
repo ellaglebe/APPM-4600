@@ -16,6 +16,7 @@ def driver():
 # test f1 '''
      x0 = 1.5
      [xstar,ier, vec, c] = fixedpt(f1,x0,tol,Nmax)
+     [avec] = aitkens(vec)
      print('the approximate fixed point is:',xstar)
      print('f1(xstar):',f1(xstar))
      print(vec)
@@ -62,20 +63,16 @@ def fixedpt(f,x0,tol,Nmax):
      return [xstar, ier, np.array(vec),c]
 
 
-def aitkens(vec,tol):
-     avec = []
+def aitkens(vec):
+     avec =[]
      count1 = 0
-     for i in range(len(vec)):
+     for i in range(len(vec)-2):
           num = (vec[i+1]-vec[i])**2
           denom = (vec[i+2]-2*vec[i+1]+vec[i])
           avec.append(vec[i]-(num/denom))
           count1 += 1
-          if (abs(avec[i+1]-avec[i]) <tol):
-               xstar = x1
-               ier = 0
-               print(count1)
-               return avec
      print(avec)
-    
+     print(count1)
+     return [avec]
  
 driver()
