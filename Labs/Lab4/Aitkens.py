@@ -74,5 +74,6 @@ def aitkens(vec):
      print(avec)
      print(count1)
      return [avec]
+     
  
 driver()

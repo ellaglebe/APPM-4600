@@ -1,0 +1,149 @@
+Last login: Thu Sep 21 13:59:40 on ttys000
+(base) ellaglebe@engr2-2-80-22-dhcp ~ % python3
+Python 3.8.8 (default, Apr 13 2021, 12:59:45) 
+[Clang 10.0.0 ] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import numpy as np
+>>> import scipy 
+>>> import math
+>>> import matplotlib.pyplot as plt
+>>> x = np.linspace(0, 10, 100)
+>>> f = 15/35-2/np.sqrt(np.pi)*scipy.integrate.quad(exp(-s**2),0,x/(2*np.sqrt(.138*10**-5*60)))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'scipy' has no attribute 'integrate'
+>>> import scipy.integrate as integrate
+>>> f = 15/35-2/np.sqrt(np.pi)*scipy.integrate.quad(exp(-s**2),0,x/(2*np.sqrt(.138*10**-5*60)))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'exp' is not defined
+>>> f = 15/35-2/np.sqrt(np.pi)*scipy.integrate.quad(np.exp(-s**2),0,x/(2*np.sqrt(.138*10**-5*60)))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 's' is not defined
+>>> f = 15/35-2/np.sqrt(np.pi)*scipy.integrate.quad(lambda: np.exp(-s**2),0,x/(2*np.sqrt(.138*10**-5*60)))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/scipy/integrate/quadpack.py", line 348, in quad
+    flip, a, b = b < a, min(a, b), max(a, b)
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+>>> f = integrate.quad(lambda: np.exp(-s**2),0,x/2*np.sqrt(0.138*10**-5*60)))
+  File "<stdin>", line 1
+    f = integrate.quad(lambda: np.exp(-s**2),0,x/2*np.sqrt(0.138*10**-5*60)))
+                                                                            ^
+SyntaxError: unmatched ')'
+>>> f = integrate.quad(lambda: np.exp(-s**2),0,x/2*np.sqrt(0.138*10**-5*60))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/scipy/integrate/quadpack.py", line 348, in quad
+    flip, a, b = b < a, min(a, b), max(a, b)
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+>>> alpha = 0.138*10**-5
+>>> t=60*60*60*24
+>>> x = np.linspace(0, 2, 100)
+>>> bound = np.array([i/(2*np.sqrt(t*alpha)) for i in x])
+>>> tempF = []
+>>> for i in bound:
+...     temp, _ = scipy.integrate.quad(lambda s: np.exp(-s**2), 0 ,i)
+...     tempF.append(temp)
+...     f =  15/35 - (2/np.sqrt(np.pi))*np.array(tempF)
+... 
+>>> plt.plot(x,f)
+[<matplotlib.lines.Line2D object at 0x7f7f293408b0>]
+>>> plt.show()
+>>> exit()
+(base) ellaglebe@engr2-2-80-22-dhcp ~ % cd /Users/ellaglebe/Downloads/APPM-4600/Homeworks/Homework4
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % python3 HW4
+python3: can't open file 'HW4': [Errno 2] No such file or directory
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % python3 HW4.py
+  File "HW4.py", line 1
+    Python 3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)] on darwin
+           ^
+SyntaxError: invalid syntax
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % python3 HW4.py
+  File "HW4.py", line 2
+    >>> import scipy
+    ^
+SyntaxError: invalid syntax
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % pip install scipy 
+Requirement already satisfied: scipy in /Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages (1.6.2)
+Requirement already satisfied: numpy<1.23.0,>=1.16.5 in /Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages (from scipy) (1.20.1)
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % python3 HW4.py    
+  File "HW4.py", line 2
+    >>> import scipy.intgrate as integrate
+    ^
+SyntaxError: invalid syntax
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % python3 HW4.py
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % python3 HW4.py
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % pyhton3 bisection.py
+zsh: command not found: pyhton3
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % python3 bisection.py
+  File "bisection.py", line 15
+    tol = 1e-13
+    ^
+IndentationError: unexpected indent
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % python3 bisection.py
+  File "bisection.py", line 7
+    f = lambda x: f = integrate.quad(lambda: np.exp(-s**2),0,x/2*np.sqrt(0.138*10**-6*60*3600*24))
+        ^
+SyntaxError: cannot assign to lambda
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % python3 bisection.py           
+Traceback (most recent call last):
+  File "bisection.py", line 80, in <module>
+    driver()               
+  File "bisection.py", line 16, in driver
+    [astar,ier] = bisection(f,a,b,tol)
+  File "bisection.py", line 40, in bisection
+    fa = f(a)
+  File "bisection.py", line 7, in <lambda>
+    f = lambda x: integrate.quad(lambda: np.exp(-s**2),0,x/2*np.sqrt(0.138*10**-6*60*3600*24))
+NameError: name 'integrate' is not defined
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % python3 bisection.py
+Traceback (most recent call last):
+  File "bisection.py", line 81, in <module>
+    driver()               
+  File "bisection.py", line 17, in driver
+    [astar,ier] = bisection(f,a,b,tol)
+  File "bisection.py", line 41, in bisection
+    fa = f(a)
+  File "bisection.py", line 8, in <lambda>
+    f = lambda x: integrate.quad(lambda: np.exp(-s**2),0,x/2*np.sqrt(0.138*10**-6*60*3600*24))
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/scipy/integrate/quadpack.py", line 351, in quad
+    retval = _quad(func, a, b, args, full_output, epsabs, epsrel, limit,
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/scipy/integrate/quadpack.py", line 463, in _quad
+    return _quadpack._qagse(func,a,b,args,full_output,epsabs,epsrel,limit)
+TypeError: <lambda>() takes 0 positional arguments but 1 was given
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % python3 bisection.py
+Traceback (most recent call last):
+  File "bisection.py", line 81, in <module>
+    driver()               
+  File "bisection.py", line 17, in driver
+    [astar,ier] = bisection(f,a,b,tol)
+  File "bisection.py", line 43, in bisection
+    if (fa*fb>0):
+TypeError: can't multiply sequence by non-int of type 'tuple'
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % python3 bisection.py
+the approximate root is 0
+the error message reads: 0
+f(astar) = 0.0
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % python3 bisection.py
+  File "bisection.py", line 8
+    f = lambda x: 15/35-2/np.sqrt(np.pi)integrate.quad(lambda s: np.exp(-s**2),0,x/2*np.sqrt(0.138*10**-6*60*3600*24))[0]
+                                        ^
+SyntaxError: invalid syntax
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % python3 bisection.py
+count is 43
+the approximate root is 0.946280996267717
+the error message reads: 0
+f(astar) = -1.0436096431476471e-14
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % python3 bisection.py
+  File "bisection.py", line 12
+    a = 0
+    ^
+IndentationError: unexpected indent
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % python3 bisection.py
+count is 44
+the approximate root is 0.6769618544819309
+the error message reads: 0
+f(astar) = -3.164135620181696e-15
+(base) ellaglebe@engr2-2-80-22-dhcp Homework4 % 
