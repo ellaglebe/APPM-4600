@@ -1,0 +1,154 @@
+Last login: Mon Sep 25 10:19:15 on ttys000
+(base) ellaglebe@MacBook-Pro-83 ~ % cd /Users/ellaglebe/Downloads/APPM-4600/Homeworks/Homework4
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+the approximate root is 2.0000000000000000e+00
+the error message reads: 0
+Number of iterations: 7
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+the approximate root is 2.0000000000000000e+00
+the error message reads: 0
+Number of iterations: 7
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+the approximate root is 2.0000000000000000e+00
+the error message reads: 0
+Number of iterations: 7
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+the approximate root is 2.0000000000000000e+00
+the error message reads: 0
+Number of iterations: 7
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+  File "newton_example.py", line 12
+    p0 = 1.2
+    ^
+SyntaxError: invalid syntax
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+  File "newton_example.py", line 13
+    p0 = 0.01
+    ^
+SyntaxError: invalid syntax
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+  File "newton_example.py", line 13
+    p0 = 0.01
+    ^
+SyntaxError: invalid syntax
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+  File "newton_example.py", line 13
+    p = 0.01
+    ^
+SyntaxError: invalid syntax
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+  File "newton_example.py", line 13
+    p0 = 0.01
+    ^
+SyntaxError: invalid syntax
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+  File "newton_example.py", line 13
+    p0 = 0.01
+    ^
+SyntaxError: invalid syntax
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 HW4.py
+  File "HW4.py", line 19
+    plt.plot(x,f)
+    ^
+SyntaxError: invalid syntax
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 HW4.py
+  File "HW4.py", line 19
+    plt.plot(x,f)
+    ^
+SyntaxError: invalid syntax
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 HW4.py
+Traceback (most recent call last):
+  File "HW4.py", line 16, in <module>
+    f =  (15/35 - scipy.special.erf(x/(2*np.sqrt(alpha*t))))                              
+AttributeError: module 'scipy' has no attribute 'special'
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 HW4.py
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+Traceback (most recent call last):
+  File "newton_example.py", line 55, in <module>
+    driver()
+  File "newton_example.py", line 18, in driver
+    (p,pstar,info,it) = newton(f,fp,p0,tol, Nmax)
+  File "newton_example.py", line 44, in newton
+    p1 = p0-f(p0)/fp(p0)
+  File "newton_example.py", line 11, in <lambda>
+    f = lambda x:( 15/35 - special.erf(x/(2*np.sqrt(alpha*t))))
+NameError: name 'special' is not defined
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+the approximate root is 6.7696185448026303e-01
+the error message reads: 1
+Number of iterations: 99
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+the approximate root is 6.7696185455623770e-01
+the error message reads: 1
+Number of iterations: 99
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+Traceback (most recent call last):
+  File "newton_example.py", line 56, in <module>
+    driver()
+  File "newton_example.py", line 19, in driver
+    (p,pstar,info,it) = newton(f,fp,p0,tol, Nmax)
+  File "newton_example.py", line 45, in newton
+    p1 = p0-f(p0)/fp(p0)
+  File "newton_example.py", line 13, in <lambda>
+    fp = lambda x: diff(- special.erf(x/(2*np.sqrt(alpha*t))))
+NameError: name 'diff' is not defined
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+  File "newton_example.py", line 13
+    fp = lambda x: -2*/np.sqrt(np.pi)*np.exp((-x/2*np.sqrt(alpha*t))**2)
+                      ^
+SyntaxError: invalid syntax
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+the approximate root is 6.7696185448185575e-01
+the error message reads: 0
+Number of iterations: 46
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+the approximate root is 6.7696185448201651e-01
+the error message reads: 0
+Number of iterations: 51
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+the approximate root is 6.7696185448192991e-01
+the error message reads: 0
+Number of iterations: 19
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+the approximate root is 6.7696185448196011e-01
+the error message reads: 0
+Number of iterations: 22
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+  File "newton_example.py", line 13
+    fp = lambda x: -1/(np.sqrt(np.pi)*np.sqrt(alpha*t))*np.exp((-x/4*(alpha*t)))  p0 = 2
+                                                                                  ^
+SyntaxError: invalid syntax
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+the approximate root is 6.7696185448194002e-01
+the error message reads: 0
+Number of iterations: 10
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+the approximate root is 6.7696185448193635e-01
+the error message reads: 0
+Number of iterations: 10
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+the approximate root is 6.7696185448193635e-01
+the error message reads: 0
+Number of iterations: 10
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 newton_example.py
+the approximate root is 6.7696185448193646e-01
+the error message reads: 0
+Number of iterations: 0
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 HW4.py           
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 bisection.py
+Traceback (most recent call last):
+  File "bisection.py", line 84, in <module>
+    driver()               
+  File "bisection.py", line 20, in driver
+    [astar,ier] = bisection(f,a,b,tol)
+  File "bisection.py", line 44, in bisection
+    fa = f(a)
+  File "bisection.py", line 10, in <lambda>
+    f = lambda x:( 15/35 - special.erf(x/(2*np.sqrt(alpha*t))))
+NameError: name 'special' is not defined
+(base) ellaglebe@MacBook-Pro-83 Homework4 % python3 bisection.py
+count is 44
+the approximate root is 0.6769618544819309
+the error message reads: 0
+f(astar) = 3.219646771412954e-15
+(base) ellaglebe@MacBook-Pro-83 Homework4 % 

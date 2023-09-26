@@ -1,13 +1,13 @@
 # import libraries
 import numpy as np
-import scipy.integrate as integrate
+import scipy.special as special
 
 def driver():
 
 # use routines    
     alpha = 0.138 * 10**-6
     t = 3600*60*24
-    f = lambda x: -1*(15/35 - (2/np.sqrt(np.pi))*integrate.quad(lambda s: np.exp(-s**2), 0 ,(x/(2*np.sqrt(t*alpha))))[0])
+    f = lambda x:( 15/35 - special.erf(x/(2*np.sqrt(alpha*t))))
 
     a = 0
     b = 2
