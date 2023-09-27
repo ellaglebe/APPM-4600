@@ -1,0 +1,168 @@
+Last login: Tue Sep 26 13:54:41 on ttys000
+(base) ellaglebe@cu-engr2-1-15-10 ~ % cd /Users/ellaglebe/Downloads/APPM-4600/Homeworks/Homework4
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+  File "secant.py", line 42
+    if (abs(f(p0))=0):
+    ^
+IndentationError: unexpected indent
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+  File "secant.py", line 42
+    if (abs(f(p0))=0):
+                  ^
+SyntaxError: invalid syntax
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+  File "secant.py", line 42
+    if (abs(f(p0)=0):
+                    ^
+SyntaxError: invalid syntax
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+Traceback (most recent call last):
+  File "secant.py", line 71, in <module>
+    driver()
+  File "secant.py", line 19, in driver
+    (pstar,info,it) = secant(f,p0,p1,tol, Nmax)
+TypeError: cannot unpack non-iterable NoneType object
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+Traceback (most recent call last):
+  File "secant.py", line 71, in <module>
+    driver()
+  File "secant.py", line 19, in driver
+    (pstar,info,it) = secant(f,p0,p1,tol, Nmax)
+TypeError: cannot unpack non-iterable NoneType object
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+Traceback (most recent call last):
+  File "secant.py", line 72, in <module>
+    driver()
+  File "secant.py", line 19, in driver
+    (p,pstar,info,it) = secant(f,p0,p1,tol, Nmax)
+TypeError: cannot unpack non-iterable NoneType object
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+Traceback (most recent call last):
+  File "secant.py", line 72, in <module>
+    driver()
+  File "secant.py", line 19, in driver
+    (p,pstar,info,it) = secant(f,p0,p1,tol, Nmax)
+TypeError: cannot unpack non-iterable NoneType object
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+the approximate root is 1.1347241384015196e+00
+the error message reads: 0
+Number of iterations: 8
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 newton.py
+the approximate root is 1.1347241384015194e+00
+the error message reads: 0
+Number of iterations: 8
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+the approximate root is 1.1347241384015196e+00
+the error message reads: 0
+Number of iterations: 8
+[1.13472414 1.13472414 1.13472414 1.13472414 1.13472414 1.13472414
+ 1.13472414 1.13472414]
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+the approximate root is 1.1347241384015196e+00
+the error message reads: 0
+Number of iterations: 8
+[1.13472414e+00 1.34724138e-01 1.18595106e-01 5.58536303e-02
+ 1.70683075e-02 2.19258819e-03 9.26696033e-05 4.92452815e-07]
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+the approximate root is 1.1347241384015196e+00
+the error message reads: 0
+Number of iterations: 9
+[1.13472414e+00 1.34724138e-01 1.18595106e-01 5.58536303e-02
+ 1.70683075e-02 2.19258819e-03 9.26696033e-05 4.92452815e-07
+ 1.10303766e-10]
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 newton.py
+the approximate root is 1.1347241384015194e+00
+the error message reads: 0
+Number of iterations: 8
+Error [8.65275862e-01 5.45904134e-01 2.96014850e-01 1.20246818e-01
+ 2.68142944e-02 1.62913577e-03 6.38994211e-06 9.87017135e-11]
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+Traceback (most recent call last):
+  File "secant.py", line 3, in <module>
+    import matplotlib.pylpot as plt
+ModuleNotFoundError: No module named 'matplotlib.pylpot'
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+the approximate root is 1.1347241384015196e+00
+the error message reads: 0
+Number of iterations: 9
+[1.13472414e+00 1.34724138e-01 1.18595106e-01 5.58536303e-02
+ 1.70683075e-02 2.19258819e-03 9.26696033e-05 4.92452815e-07
+ 1.10303766e-10]
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+the approximate root is 1.1347241384015196e+00
+the error message reads: 0
+Number of iterations: 9
+[1.13472414e+00 1.34724138e-01 1.18595106e-01 5.58536303e-02
+ 1.70683075e-02 2.19258819e-03 9.26696033e-05 4.92452815e-07
+ 1.10303766e-10]
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 newton.py
+the approximate root is 1.1347241384015194e+00
+the error message reads: 0
+Number of iterations: 8
+Error [8.65275862e-01 5.45904134e-01 2.96014850e-01 1.20246818e-01
+ 2.68142944e-02 1.62913577e-03 6.38994211e-06 9.87017135e-11]
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+the approximate root is 1.1347241384015196e+00
+the error message reads: 0
+Number of iterations: 9
+[1.13472414e+00 1.34724138e-01 1.18595106e-01 5.58536303e-02
+ 1.70683075e-02 2.19258819e-03 9.26696033e-05 4.92452815e-07
+ 1.10303766e-10]
+Traceback (most recent call last):
+  File "secant.py", line 81, in <module>
+    driver()
+  File "secant.py", line 24, in driver
+    print('Slope=', (xk1[4]-xk1[2])/(xk[4]-xk[2]))
+UnboundLocalError: local variable 'xk1' referenced before assignment
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+the approximate root is 1.1347241384015196e+00
+the error message reads: 0
+Number of iterations: 9
+[1.13472414e+00 1.34724138e-01 1.18595106e-01 5.58536303e-02
+ 1.70683075e-02 2.19258819e-03 9.26696033e-05 4.92452815e-07
+ 1.10303766e-10]
+Traceback (most recent call last):
+  File "secant.py", line 81, in <module>
+    driver()
+  File "secant.py", line 24, in driver
+    print('Slope=', (xk1[4]-xk1[2])/(xk[4]-xk[2]))
+UnboundLocalError: local variable 'xk1' referenced before assignment
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+the approximate root is 1.1347241384015196e+00
+the error message reads: 0
+Number of iterations: 9
+[1.13472414e+00 1.34724138e-01 1.18595106e-01 5.58536303e-02
+ 1.70683075e-02 2.19258819e-03 9.26696033e-05 4.92452815e-07
+ 1.10303766e-10]
+Slope= 0.5285406689225092
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+the approximate root is 1.1347241384015196e+00
+the error message reads: 0
+Number of iterations: 9
+[1.13472414e+00 1.34724138e-01 1.18595106e-01 5.58536303e-02
+ 1.70683075e-02 2.19258819e-03 9.26696033e-05 4.92452815e-07
+ 1.10303766e-10]
+Slope= 1.8920019949242783
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 newton.py
+the approximate root is 1.1347241384015194e+00
+the error message reads: 0
+Number of iterations: 8
+Error [8.65275862e-01 5.45904134e-01 2.96014850e-01 1.20246818e-01
+ 2.68142944e-02 1.62913577e-03 6.38994211e-06 9.87017135e-11]
+Slope= 2.2694808317392683
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 secant.py
+the approximate root is 1.1347241384015196e+00
+the error message reads: 0
+Number of iterations: 9
+[1.13472414e+00 1.34724138e-01 1.18595106e-01 5.58536303e-02
+ 1.70683075e-02 2.19258819e-03 9.26696033e-05 4.92452815e-07
+ 1.10303766e-10]
+Slope= 1.1183867107345191
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % python3 newton.py
+the approximate root is 1.1347241384015194e+00
+the error message reads: 0
+Number of iterations: 8
+Error [8.65275862e-01 5.45904134e-01 2.96014850e-01 1.20246818e-01
+ 2.68142944e-02 1.62913577e-03 6.38994211e-06 9.87017135e-11]
+Slope= 1.8387143336142207
+(base) ellaglebe@cu-engr2-1-15-10 Homework4 % 
