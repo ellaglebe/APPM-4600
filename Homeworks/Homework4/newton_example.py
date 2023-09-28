@@ -11,7 +11,7 @@ def driver():
   t = 3600*60*24
   f = lambda x:( 15/35 - special.erf(x/(2*np.sqrt(alpha*t))))
   fp = lambda x: -1/(np.sqrt(np.pi)*np.sqrt(alpha*t))*np.exp((-x/4*(alpha*t)))
-  p0 = 6.7696185448193635e-01
+  p0 = 0.01
 
   Nmax = 100
   tol = 1.e-13
