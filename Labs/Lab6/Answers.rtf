@@ -1,0 +1,12 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 1) We used a condition where you check how fast the iterations are converging by taking the last iteration minus the first one to see if we need to recompute the Jacobian or not and then proceeding with the Lazy Newton method. We could\'92ve also used the norm of the error terms.\
+\
+4) I used abs(it[1]-it[0])>0.7 and got 7 iterations to convergence, but my friend got 22 iterations when using 0.1 as the metric. \
+\
+}
