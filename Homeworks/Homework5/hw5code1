@@ -1,0 +1,503 @@
+Last login: Wed Oct  4 15:06:40 on ttys000
+(base) ellaglebe@MacBook-Pro-83 ~ % cd /Users/ellaglebe/Downloads/APPM-4600/Labs/Lab6
+(base) ellaglebe@MacBook-Pro-83 Lab6 % python3 newtonNONLinear.py
+  File "newtonNONLinear.py", line 120
+    x1 = x0 - Jinv.dot(F)
+                        ^
+IndentationError: unindent does not match any outer indentation level
+(base) ellaglebe@MacBook-Pro-83 Lab6 % python3 newtonNONLinear.py
+[0.5       0.8660254]
+inter Newton: the error message reads: 0
+inter Netwon: number of iterations is: 68
+newtonNONLinear.py:53: RuntimeWarning: overflow encountered in double_scalars
+  F[0] = 3*x[0]**2-(x[1]**2)
+newtonNONLinear.py:53: RuntimeWarning: invalid value encountered in double_scalars
+  F[0] = 3*x[0]**2-(x[1]**2)
+newtonNONLinear.py:54: RuntimeWarning: overflow encountered in double_scalars
+  F[1] = 3*x[0]*x[1]**2-(x[0]**3)-1
+newtonNONLinear.py:54: RuntimeWarning: invalid value encountered in double_scalars
+  F[1] = 3*x[0]*x[1]**2-(x[0]**3)-1
+[nan nan]
+inter Lazy Newton: the error message reads: 1
+real Lazy Newton: took this many seconds: 0.0008970975875854492
+inter Lazy Newton: number of iterations is: 99
+Traceback (most recent call last):
+  File "newtonNONLinear.py", line 188, in <module>
+    driver()       
+  File "newtonNONLinear.py", line 33, in driver
+    [xstar,ier,its] = Slacker(x0,tol,Nmax)
+NameError: name 'Slacker' is not defined
+(base) ellaglebe@MacBook-Pro-83 Lab6 % python3 newtonNONLinear.py
+[0.5       0.8660254]
+inter Newton: the error message reads: 0
+inter Netwon: number of iterations is: 68
+newtonNONLinear.py:53: RuntimeWarning: overflow encountered in double_scalars
+  F[0] = 3*x[0]**2-(x[1]**2)
+newtonNONLinear.py:53: RuntimeWarning: invalid value encountered in double_scalars
+  F[0] = 3*x[0]**2-(x[1]**2)
+newtonNONLinear.py:54: RuntimeWarning: overflow encountered in double_scalars
+  F[1] = 3*x[0]*x[1]**2-(x[0]**3)-1
+newtonNONLinear.py:54: RuntimeWarning: invalid value encountered in double_scalars
+  F[1] = 3*x[0]*x[1]**2-(x[0]**3)-1
+[nan nan]
+inter Lazy Newton: the error message reads: 1
+real Lazy Newton: took this many seconds: 0.000980246067047119
+inter Lazy Newton: number of iterations is: 99
+Traceback (most recent call last):
+  File "newtonNONLinear.py", line 188, in <module>
+    driver()       
+  File "newtonNONLinear.py", line 33, in driver
+    [xstar,ier,its] = Slacker(x0,tol,Nmax)
+NameError: name 'Slacker' is not defined
+(base) ellaglebe@MacBook-Pro-83 Lab6 % python3 newtonNONLinear.py
+  File "newtonNONLinear.py", line 61
+    [1-np.cos(x[0]), 1+np.cos(x[0]-x[1]]])
+                                       ^
+SyntaxError: closing parenthesis ']' does not match opening parenthesis '('
+(base) ellaglebe@MacBook-Pro-83 Lab6 % python3 newtonNONLinear.py
+[ 0.99860695 -0.10553038]
+inter Newton: the error message reads: 1
+inter Netwon: number of iterations is: 99
+[ 0.99860694 -0.10553049]
+inter Lazy Newton: the error message reads: 0
+real Lazy Newton: took this many seconds: 0.00015354156494140625
+inter Lazy Newton: number of iterations is: 13
+Traceback (most recent call last):
+  File "newtonNONLinear.py", line 189, in <module>
+    driver()       
+  File "newtonNONLinear.py", line 33, in driver
+    [xstar,ier,its] = Slacker(x0,tol,Nmax)
+NameError: name 'Slacker' is not defined
+(base) ellaglebe@MacBook-Pro-83 Lab6 % python3 newtonNONLinear.py
+  File "newtonNONLinear.py", line 31
+    t = time.time()
+    ^
+IndentationError: unexpected indent
+(base) ellaglebe@MacBook-Pro-83 Lab6 % python3 newtonNONLinear.py
+[ 0.99860695 -0.10553038]
+inter Newton: the error message reads: 1
+inter Netwon: number of iterations is: 99
+[ 0.99860694 -0.10553049]
+inter Lazy Newton: the error message reads: 0
+real Lazy Newton: took this many seconds: 0.00016794204711914062
+inter Lazy Newton: number of iterations is: 13
+Traceback (most recent call last):
+  File "newtonNONLinear.py", line 190, in <module>
+    driver()       
+  File "newtonNONLinear.py", line 33, in driver
+    [xstar,ier,its] =  Slaker(x0,tol,Nmax)
+  File "newtonNONLinear.py", line 116, in Slaker
+    Jinv = inv(J)
+  File "<__array_function__ internals>", line 5, in inv
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 539, in inv
+    _assert_stacked_2d(a)
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 196, in _assert_stacked_2d
+    raise LinAlgError('%d-dimensional array given. Array must be '
+numpy.linalg.LinAlgError: 1-dimensional array given. Array must be at least two-dimensional
+(base) ellaglebe@MacBook-Pro-83 Lab6 % python3 newtonNONLinear.py
+[ 0.99860694 -0.10553048]
+inter Newton: the error message reads: 1
+inter Netwon: number of iterations is: 99
+[ 0.99860694 -0.10553049]
+inter Lazy Newton: the error message reads: 0
+real Lazy Newton: took this many seconds: 0.00010210275650024414
+inter Lazy Newton: number of iterations is: 7
+Traceback (most recent call last):
+  File "newtonNONLinear.py", line 190, in <module>
+    driver()       
+  File "newtonNONLinear.py", line 33, in driver
+    [xstar,ier,its] =  Slaker(x0,tol,Nmax)
+  File "newtonNONLinear.py", line 116, in Slaker
+    Jinv = inv(J)
+  File "<__array_function__ internals>", line 5, in inv
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 539, in inv
+    _assert_stacked_2d(a)
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 196, in _assert_stacked_2d
+    raise LinAlgError('%d-dimensional array given. Array must be '
+numpy.linalg.LinAlgError: 1-dimensional array given. Array must be at least two-dimensional
+(base) ellaglebe@MacBook-Pro-83 Lab6 % python3 newtonNONLinear.py
+  File "newtonNONLinear.py", line 117
+    count 0
+          ^
+SyntaxError: invalid syntax
+(base) ellaglebe@MacBook-Pro-83 Lab6 % python3 newtonNONLinear.py
+[ 0.99860694 -0.10553048]
+inter Newton: the error message reads: 1
+inter Netwon: number of iterations is: 99
+[ 0.99860694 -0.10553049]
+inter Lazy Newton: the error message reads: 0
+real Lazy Newton: took this many seconds: 0.0001049041748046875
+inter Lazy Newton: number of iterations is: 7
+Traceback (most recent call last):
+  File "newtonNONLinear.py", line 191, in <module>
+    driver()       
+  File "newtonNONLinear.py", line 33, in driver
+    [xstar,ier,its] =  Slaker(x0,tol,Nmax)
+  File "newtonNONLinear.py", line 116, in Slaker
+    Jinv = inv(J)
+  File "<__array_function__ internals>", line 5, in inv
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 539, in inv
+    _assert_stacked_2d(a)
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 196, in _assert_stacked_2d
+    raise LinAlgError('%d-dimensional array given. Array must be '
+numpy.linalg.LinAlgError: 1-dimensional array given. Array must be at least two-dimensional
+(base) ellaglebe@MacBook-Pro-83 Lab6 % python3 newtonNONLinear.py
+[ 0.99860694 -0.10553048]
+inter Newton: the error message reads: 1
+inter Netwon: number of iterations is: 99
+[ 0.99860694 -0.10553049]
+inter Lazy Newton: the error message reads: 0
+real Lazy Newton: took this many seconds: 0.00010305643081665039
+inter Lazy Newton: number of iterations is: 7
+Traceback (most recent call last):
+  File "newtonNONLinear.py", line 191, in <module>
+    driver()       
+  File "newtonNONLinear.py", line 33, in driver
+    [xstar,ier,its] =  Slaker(x0,tol,Nmax)
+  File "newtonNONLinear.py", line 116, in Slaker
+    Jinv = inv(J)
+  File "<__array_function__ internals>", line 5, in inv
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 539, in inv
+    _assert_stacked_2d(a)
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 196, in _assert_stacked_2d
+    raise LinAlgError('%d-dimensional array given. Array must be '
+numpy.linalg.LinAlgError: 1-dimensional array given. Array must be at least two-dimensional
+(base) ellaglebe@MacBook-Pro-83 Lab6 % python3 newtonNONLinear.py
+[ 0.99860694 -0.10553048]
+inter Newton: the error message reads: 1
+inter Netwon: number of iterations is: 99
+[ 0.99860694 -0.10553049]
+inter Lazy Newton: the error message reads: 0
+real Lazy Newton: took this many seconds: 0.00010219812393188476
+inter Lazy Newton: number of iterations is: 7
+Traceback (most recent call last):
+  File "newtonNONLinear.py", line 191, in <module>
+    driver()       
+  File "newtonNONLinear.py", line 33, in driver
+    [xstar,ier,its] =  Slaker(x0,tol,Nmax)
+  File "newtonNONLinear.py", line 116, in Slaker
+    Jinv = inv(J)
+  File "<__array_function__ internals>", line 5, in inv
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 539, in inv
+    _assert_stacked_2d(a)
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 196, in _assert_stacked_2d
+    raise LinAlgError('%d-dimensional array given. Array must be '
+numpy.linalg.LinAlgError: 1-dimensional array given. Array must be at least two-dimensional
+(base) ellaglebe@MacBook-Pro-83 Lab6 % python3 newtonNONLinear.py
+[ 0.99860694 -0.10553048]
+inter Newton: the error message reads: 1
+inter Netwon: number of iterations is: 99
+[ 0.99860694 -0.10553049]
+inter Lazy Newton: the error message reads: 0
+real Lazy Newton: took this many seconds: 0.00010898113250732422
+inter Lazy Newton: number of iterations is: 7
+Traceback (most recent call last):
+  File "newtonNONLinear.py", line 191, in <module>
+    driver()       
+  File "newtonNONLinear.py", line 33, in driver
+    [xstar,ier,its] =  Slaker(x0,tol,Nmax)
+  File "newtonNONLinear.py", line 116, in Slaker
+    Jinv = inv(J)
+  File "<__array_function__ internals>", line 5, in inv
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 539, in inv
+    _assert_stacked_2d(a)
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 196, in _assert_stacked_2d
+    raise LinAlgError('%d-dimensional array given. Array must be '
+numpy.linalg.LinAlgError: 1-dimensional array given. Array must be at least two-dimensional
+(base) ellaglebe@MacBook-Pro-83 Lab6 % python3 newtonNONLinear.py
+[ 0.99860694 -0.10553048]
+inter Newton: the error message reads: 1
+inter Netwon: number of iterations is: 99
+[ 0.99860694 -0.10553049]
+inter Lazy Newton: the error message reads: 0
+real Lazy Newton: took this many seconds: 0.00010495185852050781
+inter Lazy Newton: number of iterations is: 7
+[ 0.99860694 -0.10553049]
+inter Slacker: the error message reads: 0
+real Slacker: took this many seconds: 0.00010074377059936524
+inter Slacker: number of iterations is: 7
+[ 0.99860694 -0.10553049]
+inter Broyden: the error message reads: 0
+real Broyden: took this many seconds: 0.00014219284057617187
+inter Broyden: number of iterations is: 4
+(base) ellaglebe@MacBook-Pro-83 Lab6 % git add *
+(base) ellaglebe@MacBook-Pro-83 Lab6 % git commit -a -m"lab6"
+[main fd3a64d] lab6
+ 3 files changed, 204 insertions(+), 1 deletion(-)
+ create mode 100644 Labs/Lab6/Answers.rtf
+ create mode 100644 Labs/Lab6/newtonNONLinear.py
+(base) ellaglebe@MacBook-Pro-83 Lab6 % git push
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 2.31 KiB | 2.31 MiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:ellaglebe/APPM-4600.git
+   24cd4d9..fd3a64d  main -> main
+(base) ellaglebe@MacBook-Pro-83 Lab6 % git push
+Everything up-to-date
+(base) ellaglebe@MacBook-Pro-83 Lab6 % cd /Users/ellaglebe/Downloads/APPM-4600/Homeworks/Homework5
+(base) ellaglebe@MacBook-Pro-83 Homework5 % python3 hw5q3.py
+[0.5       0.8660254]
+inter Newton: the error message reads: 0
+inter Netwon: number of iterations is: 68
+hw5q3.py:44: RuntimeWarning: overflow encountered in double_scalars
+  F[0] = 3*x[0]**2-(x[1]**2)
+hw5q3.py:44: RuntimeWarning: invalid value encountered in double_scalars
+  F[0] = 3*x[0]**2-(x[1]**2)
+hw5q3.py:45: RuntimeWarning: overflow encountered in double_scalars
+  F[1] = 3*x[0]*x[1]**2-(x[0]**3)-1
+hw5q3.py:45: RuntimeWarning: invalid value encountered in double_scalars
+  F[1] = 3*x[0]*x[1]**2-(x[0]**3)-1
+[nan nan]
+inter Lazy Newton: the error message reads: 1
+real Lazy Newton: took this many seconds: 0.0008855581283569336
+inter Lazy Newton: number of iterations is: 99
+[ 0.5       -0.8660254]
+inter Broyden: the error message reads: 0
+real Broyden: took this many seconds: 0.0008861064910888672
+inter Broyden: number of iterations is: 42
+(base) ellaglebe@MacBook-Pro-83 Homework5 % python3 hw5q3.py
+Traceback (most recent call last):
+  File "hw5q3.py", line 44, in <module>
+    driver()
+  File "hw5q3.py", line 28, in driver
+    points.append(x1)
+NameError: name 'points' is not defined
+(base) ellaglebe@MacBook-Pro-83 Homework5 % python3 hw5q3.py
+Traceback (most recent call last):
+  File "hw5q3.py", line 44, in <module>
+    driver()
+  File "hw5q3.py", line 32, in driver
+    print(tabulate(points, headers = ["x","y","z"], tablefmt = "fancy_grid"))
+NameError: name 'tabulate' is not defined
+(base) ellaglebe@MacBook-Pro-83 Homework5 % python3 hw5q3.py
+Traceback (most recent call last):
+  File "hw5q3.py", line 4, in <module>
+    from tabulate import tabulate
+ModuleNotFoundError: No module named 'tabulate'
+(base) ellaglebe@MacBook-Pro-83 Homework5 % python3 hw5q3.py
+Traceback (most recent call last):
+  File "hw5q3.py", line 4, in <module>
+    from tabulate import tabulate
+ModuleNotFoundError: No module named 'tabulate'
+(base) ellaglebe@MacBook-Pro-83 Homework5 % pip install tabulate
+Collecting tabulate
+  Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+Installing collected packages: tabulate
+Successfully installed tabulate-0.9.0
+(base) ellaglebe@MacBook-Pro-83 Homework5 % pip install tabulate
+Requirement already satisfied: tabulate in /Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages (0.9.0)
+(base) ellaglebe@MacBook-Pro-83 Homework5 % python3 hw5q3.py
+╒═════════╤═════════╤═════════╕
+│       x │       y │       z │
+╞═════════╪═════════╪═════════╡
+│ 1.10606 │ 1.42424 │ 1.42424 │
+├─────────┼─────────┼─────────┤
+│ 1.09393 │ 1.36174 │ 1.36174 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+├─────────┼─────────┼─────────┤
+│ 1.09364 │ 1.36033 │ 1.36033 │
+╘═════════╧═════════╧═════════╛
+Traceback (most recent call last):
+  File "hw5q3.py", line 43, in <module>
+    driver()
+  File "hw5q3.py", line 41, in driver
+    [alpha, constant] = orderofconvergence(1.09364,x)
+NameError: name 'orderofconvergence' is not defined
+(base) ellaglebe@MacBook-Pro-83 Homework5 % 

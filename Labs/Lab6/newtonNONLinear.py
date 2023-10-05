@@ -55,8 +55,14 @@ def evalF(x):
     F[1] = x[0]+x[1]-np.sin(x[0]-x[1])
     return F
     
-def evalJ(x): 
-
+def evalJ(x):
+    f[0] = lambda x: 4*x[0]**2+x[1]**2-4
+    h = 0.01*2.**(-np.arange(0,10))
+    x = np.pi/2
+    fp = (f(x+h)-f(x))/h
+    print(fp)
+    fp1 = (f(x+h)-f(x-h))/(2*h)
+    print(fp1)
     
     J = np.array([[8*x[0], 2*x[1]], 
         [1-np.cos(x[0]), 1+np.cos(x[0]-x[1])]])
@@ -131,6 +137,7 @@ def Slaker(x0,tol,Nmax):
     
     xstar = x1
     ier = 1
+
 def Broyden(x0,tol,Nmax):
     '''tol = desired accuracy
     Nmax = max number of iterations'''
