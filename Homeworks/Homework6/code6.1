@@ -1,0 +1,43 @@
+Last login: Mon Oct  9 15:00:47 on ttys000
+(base) ellaglebe@MacBook-Pro-83 ~ % cd /Users/ellaglebe/Downloads/APPM-4600/Homeworks/Homework6
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 q1.py
+[-1.81626407  0.8373678 ]
+inter Newton: the error message reads: 0
+inter Netwon: number of iterations is: 7
+q1.py:45: RuntimeWarning: overflow encountered in exp
+  F[1] = np.exp(x[0])+x[1]-1
+[nan nan]
+inter Lazy Newton: the error message reads: 1
+real Lazy Newton: took this many seconds: 0.0010029911994934083
+inter Lazy Newton: number of iterations is: 99
+[-1.81626407  0.8373678 ]
+inter Broyden: the error message reads: 0
+real Broyden: took this many seconds: 0.0003157496452331543
+inter Broyden: number of iterations is: 12
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 q1.py
+[ 1.00416874 -1.72963729]
+inter Newton: the error message reads: 0
+inter Netwon: number of iterations is: 5
+[ 1.00416874 -1.72963729]
+inter Lazy Newton: the error message reads: 0
+real Lazy Newton: took this many seconds: 0.00036929845809936525
+inter Lazy Newton: number of iterations is: 36
+[ 1.00416874 -1.72963729]
+inter Broyden: the error message reads: 0
+real Broyden: took this many seconds: 0.00017369985580444335
+inter Broyden: number of iterations is: 6
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 q1.py
+Traceback (most recent call last):
+  File "q1.py", line 160, in <module>
+    driver()       
+  File "q1.py", line 16, in driver
+    [xstar,ier,its] =  Newton(x0,tol,Nmax)
+  File "q1.py", line 63, in Newton
+    Jinv = inv(J)
+  File "<__array_function__ internals>", line 5, in inv
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 545, in inv
+    ainv = _umath_linalg.inv(a, signature=signature, extobj=extobj)
+  File "/Users/ellaglebe/opt/anaconda3/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 88, in _raise_linalgerror_singular
+    raise LinAlgError("Singular matrix")
+numpy.linalg.LinAlgError: Singular matrix
+(base) ellaglebe@MacBook-Pro-83 Homework6 % 
