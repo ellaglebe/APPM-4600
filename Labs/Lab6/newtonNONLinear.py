@@ -6,7 +6,7 @@ from numpy.linalg import norm
 
 def driver():
 
-    x0 = np.array([1,0])
+    x0 =np.array([0,1])
     
     Nmax = 100
     tol = 1e-10
@@ -18,6 +18,15 @@ def driver():
     print(xstar)
     print('inter','Newton: the error message reads:',ier)
     print('inter','Netwon: number of iterations is:',its)
+
+    t = time.time()
+    for j in range(50):
+      [xstar,ier,its, iterations] =  NewtonFinite(x0,tol,Nmax)
+    elapsed = time.time()-t
+    print(xstar)
+    print('inter','Newton: the error message reads:',ier)
+    print('inter','Netwon: number of iterations is:',its)
+    
      
     t = time.time()
     for j in range(20):
@@ -56,13 +65,7 @@ def evalF(x):
     return F
     
 def evalJ(x):
-    f[0] = lambda x: 4*x[0]**2+x[1]**2-4
-    h = 0.01*2.**(-np.arange(0,10))
-    x = np.pi/2
-    fp = (f(x+h)-f(x))/h
-    print(fp)
-    fp1 = (f(x+h)-f(x-h))/(2*h)
-    print(fp1)
+    
     
     J = np.array([[8*x[0], 2*x[1]], 
         [1-np.cos(x[0]), 1+np.cos(x[0]-x[1])]])
@@ -79,7 +82,7 @@ def Newton(x0,tol,Nmax):
        Jinv = inv(J)
        F = evalF(x0)
        
-       x1 = x0 -0.1*F#Jinv.dot(F)
+       x1 = x0 - Jinv.dot(F)
        
        if (norm(x1-x0) < tol):
            xstar = x1
@@ -91,7 +94,42 @@ def Newton(x0,tol,Nmax):
     xstar = x1
     ier = 1
     return[xstar,ier,its]
-           
+
+def NewtonFinite(x0, tol, Nmax):
+
+    iterations = []
+    J = np.zeros([2,2])
+    J[0,0] = forwardx(x0[0],h,x0[1])[0]
+    J[1,0] = forwardx(x0[0],h,x0[1])[1]
+    J[0,1] = forwardy(x0[1],h,x0[0])[0]
+    J[1,1] = forwardy(x0[1],h,x0[0])[1]
+    Jinv = inv(J)
+    F = evalF(x0)
+
+    x1 = x0 - Jinv.dot(F)
+    iterations.append(x1)
+
+    if (norm(x1-x0)<tol):
+        xstar = x1
+        ier = 0
+        return[xstar,ier,its,iterations]
+
+    x0 = x1
+    ier =1
+    return[xstar,ier, its, iterations]
+
+h = 0.01*2.**(-np.arange(0,10))
+def forwardx(s, h, y):
+    x0 = np.array([s+h,y])
+    x1 = np.array([s,y])
+    return (evalF(x0)-evalF(x1))/h
+
+def forwardy(s, h, x):
+    x0 = np.array([x,s+h])
+    x1 = np.array([x,s])
+    return (evalF(x0)-evalF(x1))/h
+
+
 def LazyNewton(x0,tol,Nmax):
 
     ''' Lazy Newton = use only the inverse of the Jacobian for initial guess'''

@@ -1,0 +1,70 @@
+Last login: Thu Oct  5 16:26:04 on ttys000
+(base) ellaglebe@MacBook-Pro-83 ~ % cd /Users/ellaglebe/Downloads/APPM-4600/Homeworks/Homework6
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 newton_non.py
+  File "newton_non.py", line 83
+    def #LazyNewton(x0,tol,Nmax):
+        ^
+SyntaxError: invalid syntax
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 newton_non.py
+  File "newton_non.py", line 135
+    '''(save v from previous step)'''
+    ^
+IndentationError: unexpected indent
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 newton_non.py
+  File "newton_non.py", line 146
+    ''' A = A_k^{-1} via Morrison formula'''
+    ^
+IndentationError: unexpected indent
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 newton_non.py
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 newton_non.py
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 newton_non.py
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 steep_example.py
+the steepest descent code found the solution  [-6.64330273e-05  9.99659465e-02  9.99983513e-01]
+g evaluated at this point is  4.950473926375841e-09
+ier is  0
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 steep_example.py
+the steepest descent code found the solution  [-6.64330273e-05  9.99659465e-02  9.99983513e-01]
+g evaluated at this point is  4.950473926375841e-09
+ier is  0
+Steepest: number of iterations is: 4
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 newton_non.py
+[4.24299741e-04 1.69807009e-02 1.00723759e+00]
+Newton: the error message reads: 1
+Newton: took this many seconds: 0.0029381370544433595
+Netwon: number of iterations is: 99
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 steep_example.py
+the steepest descent code found the solution  [-6.64330273e-05  9.99659465e-02  9.99983513e-01]
+g evaluated at this point is  4.950473926375841e-09
+ier is  0
+Steepest: number of iterations is: 4
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 newton_non.py
+  File "newton_non.py", line 39
+    return J
+           ^
+IndentationError: unindent does not match any outer indentation level
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 newton_non.py
+[0.  0.1 1. ]
+Newton: the error message reads: 0
+Newton: took this many seconds: 0.00012817859649658203
+Netwon: number of iterations is: 2
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 newton_non.py
+[0.  0.1 1. ]
+Newton: the error message reads: 0
+Newton: took this many seconds: 0.00012794017791748047
+Netwon: number of iterations is: 2
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 steep_example.py
+the steepest descent code found the solution  [-6.64330273e-05  9.99659465e-02  9.99983513e-01]
+g evaluated at this point is  4.950473926375841e-09
+ier is  0
+Steepest: number of iterations is: 4
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 steep_example.py
+the steepest descent code found the solution  [-0.02218553  0.08874213  0.99556289]
+g evaluated at this point is  0.0005462335865889256
+ier is  0
+Steepest: number of iterations is: 0
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 newton_non.py   
+[5.46802119e-17 1.00000000e-01 1.00000000e+00]
+Newton: the error message reads: 0
+Newton: took this many seconds: 9.113788604736328e-05
+Netwon: number of iterations is: 2
+(base) ellaglebe@MacBook-Pro-83 Homework6 % 
