@@ -1,12 +1,12 @@
 import numpy as np
 import numpy.linalg as la
-from numpy.linalg import inv
 import matplotlib.pyplot as plt
+from numpy.linalg import inv 
 
 def driver():
 
 
-    f = lambda x: 1/(1+(10*x)**2)
+    f = lambda x: 1/(1 + (10*x)**2)
 
     N = 2
     ''' interval'''
@@ -19,28 +19,7 @@ def driver():
     
     ''' create interpolation data'''
     yint = f(xint)
-    [a,fvec,vander_inv] = monomial(f,xint,N)
-def monomial(f, xint, N):
-    fvec = np.zeros(N+1)
-    vander = np.ones(N+1,N+1)
-    for t in range(N+1):
-        for z in range(N+1):
-            vander[t,z] = xint[t]**(t)
-    vander_inv = vanderinv
-    for l in range(N+1):
-        fvec.append(f(x[l]))
-    a = np.transpose(fvec) @ vander_inv
-                    
-    for c in range(N+1):
-        p = a[c]
-        p = p+a[c+1]*xint[c+1]**(c+1)
-        return p
-    return (a,fvec,vander_inv)
-        
-        
-        
-    
-    
+
     
     ''' create points for evaluating the Lagrange interpolating polynomial'''
     Neval = 1000
@@ -67,12 +46,19 @@ def monomial(f, xint, N):
 
     ''' create vector with exact values'''
     fex = f(xeval)
+
+
+    '''monomial plot'''
+    [a, polynomial_eval] = eval_monomial(f, xint, N, xeval)
+    plt.plot(xeval, fex, label = "Monomial Approximation")
+    plt.plot(xeval, fex - polynomial_eval, label = "Monomial Error")
+    plt.legend()
        
 
     plt.figure()    
-    plt.plot(xeval,fex,'ro-')
-    plt.plot(xeval,yeval_l,'bs--') 
-    plt.plot(xeval,yeval_dd,'c.--')
+    plt.plot(xeval,fex,'ro-', label = "f(x)")
+    plt.plot(xeval,yeval_l,'bs--', label = "lagrange" ) 
+    plt.plot(xeval,yeval_dd,'c.--', label = "divided difference")
     plt.legend()
 
     plt.figure() 
@@ -82,6 +68,34 @@ def monomial(f, xint, N):
     plt.semilogy(xeval,err_dd,'bs--',label='Newton DD')
     plt.legend()
     plt.show()
+
+def eval_monomial(f,x, N, xeval):
+
+    vander = np.zeros([N+1,N+1])
+    for i in range(N+1):
+        for v in range(N+1):
+            vander[i][v] = x[i]**(v)
+
+    
+    inv_vander = inv(vander)
+
+    y = f(x) 
+
+    a = inv_vander.dot(y)
+
+    polynomial_eval = []
+
+    for v in xeval:
+        num = 0 
+        for i in range(N+1):
+            num += a[i] * v**i
+
+        polynomial_eval.append(num)
+
+    return(a, polynomial_eval)
+
+    
+    
 
 def eval_lagrange(xeval,xint,yint,N):
 
@@ -126,6 +140,6 @@ def evalDDpoly(xval, xint,y,N):
 
     return yeval
 
-       
+     
 
 driver()        
