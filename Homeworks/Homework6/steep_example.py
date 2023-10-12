@@ -9,8 +9,8 @@ from numpy.linalg import norm
 def driver():
 
     Nmax = 100
-    x0= np.array([0,0,1])
-    tol = 5e-2
+    x0= np.array([-0.02218553, 0.08874213 , 0.99556289])
+    tol = 1e-6
     
     [xstar,gval,ier,its] = SteepestDescent(x0,tol,Nmax)
     print("the steepest descent code found the solution ",xstar)
@@ -30,7 +30,7 @@ def evalF(x):
 
 def evalJ(x): 
 
-    J =np.array([[1.+x[1]*x[2]*np.sin(x[0]*x[1]*x[2]),x[0]*x[2]*np.sin(x[0]*x[1]*x[2]),x[1]*x[0]*np.sin(x[0]*x[1]*x[2])],
+    J =np.array([[1.-x[1]*x[2]*np.sin(x[0]*x[1]*x[2]),-x[0]*x[2]*np.sin(x[0]*x[1]*x[2]),-x[1]*x[0]*np.sin(x[0]*x[1]*x[2])],
           [-0.25*(1-x[0])**(-0.75),1,0.1*x[2]-0.15],
           [-2*x[0],-0.2*x[1]+0.01,1]])
     return J

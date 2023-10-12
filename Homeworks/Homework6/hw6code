@@ -1,0 +1,28 @@
+Last login: Tue Oct 10 15:17:56 on ttys000
+(base) ellaglebe@MacBook-Pro-83 ~ % cd /Users/ellaglebe/Downloads/APPM-4600/Homeworks/Homework6
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 newton_non.py
+[-4.576879e-17  1.000000e-01  1.000000e+00]
+Newton: the error message reads: 0
+Newton: took this many seconds: 0.0001181793212890625
+Netwon: number of iterations is: 2
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 newton_non.py
+[-4.576879e-17  1.000000e-01  1.000000e+00]
+Newton: the error message reads: 0
+Newton: took this many seconds: 0.00010406017303466796
+Netwon: number of iterations is: 2
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 steepest_example.py
+python3: can't open file 'steepest_example.py': [Errno 2] No such file or directory
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 steep_example.py
+the steepest descent code found the solution  [-6.65088326e-05  9.99659171e-02  9.99983496e-01]
+g evaluated at this point is  4.961400391868193e-09
+ier is  0
+Steepest: number of iterations is: 3
+(base) ellaglebe@MacBook-Pro-83 Homework6 % python3 steep_example.py
+the steepest descent code found the solution  [-6.65088326e-05  9.99659171e-02  9.99983496e-01]
+g evaluated at this point is  4.961400391868193e-09
+ier is  0
+Steepest: number of iterations is: 3
+(base) ellaglebe@MacBook-Pro-83 Homework6 % 
+  [Restored Oct 11, 2023 at 10:13:04 PM]
+Last login: Wed Oct 11 22:12:59 on console
+(base) ellaglebe@MacBook-Pro-83 Homework6 % 
