@@ -12,17 +12,19 @@ def driver():
     ''' interval'''
     a = -1
     b = 1
+    h = 2/(N-1)
    
    
     ''' create equispaced interpolation nodes'''
     xint = np.linspace(a,b,N+1)
+    xint = -1 +(xint-1)*h
     
     ''' create interpolation data'''
     yint = f(xint)
 
     
     ''' create points for evaluating the Lagrange interpolating polynomial'''
-    Neval = 1000
+    Neval = 1001
     xeval = np.linspace(a,b,Neval+1)
     yeval_l= np.zeros(Neval+1)
     yeval_dd = np.zeros(Neval+1)
@@ -50,7 +52,7 @@ def driver():
 
     '''monomial plot'''
     [a, polynomial_eval] = eval_monomial(f, xint, N, xeval)
-    plt.plot(xeval, fex, label = "Monomial Approximation")
+    plt.plot(xeval, polynomial_eval, 'o',label = "Monomial Approximation")
     plt.plot(xeval, fex - polynomial_eval, label = "Monomial Error")
     plt.legend()
        
