@@ -8,7 +8,7 @@ def driver():
 
     f = lambda x: 1/(1 + (10*x)**2)
 
-    N = 10
+    N = 2
     ''' interval'''
     a = -1
     b = 1
@@ -17,7 +17,7 @@ def driver():
    
     ''' create equispaced interpolation nodes'''
     xint = np.linspace(a,b,N+1)
-    xint = -1 +(xint-1)*h
+    xint = np.array([-1 +(i-1)*h for i in range(1,N+2)])
     
     ''' create interpolation data'''
     yint = f(xint)
