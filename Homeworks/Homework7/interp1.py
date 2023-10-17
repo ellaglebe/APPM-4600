@@ -8,7 +8,7 @@ def driver():
 
     f = lambda x: 1/(1 + (10*x)**2)
 
-    N = 2
+    N = 20
     ''' interval'''
     a = -1
     b = 1
@@ -17,7 +17,7 @@ def driver():
    
     ''' create equispaced interpolation nodes'''
     xint = np.linspace(a,b,N+1)
-    xint = np.array([-1 +(i-1)*h for i in range(1,N+2)])
+    xint = np.array([-1+(i-1)*h for i in range(1,N+2)])
     
     ''' create interpolation data'''
     yint = f(xint)
@@ -39,7 +39,7 @@ def driver():
     y = dividedDiffTable(xint, y, N+1)
     ''' evaluate lagrange poly '''
     for kk in range(Neval+1):
-       yeval_l[kk] = eval_lagrange(xeval[kk],xint,yint,N)
+       yeval_l[kk] = eval_bary(xeval[kk],xint,yint,N)
        yeval_dd[kk] = evalDDpoly(xeval[kk],xint,y,N)
           
 
@@ -59,14 +59,14 @@ def driver():
 
     plt.figure()    
     plt.plot(xeval,fex,'ro-', label = "f(x)")
-    plt.plot(xeval,yeval_l,'bs--', label = "lagrange" ) 
+    plt.plot(xeval,yeval_l,'bs--', label = "barycentric" ) 
     plt.plot(xeval,yeval_dd,'c.--', label = "divided difference")
     plt.legend()
 
     plt.figure() 
     err_l = abs(yeval_l-fex)
     err_dd = abs(yeval_dd-fex)
-    plt.semilogy(xeval,err_l,'ro--',label='lagrange')
+    plt.semilogy(xeval,err_l,'ro--',label='barycentric')
     plt.semilogy(xeval,err_dd,'bs--',label='Newton DD')
     plt.legend()
     plt.show()
@@ -99,19 +99,20 @@ def eval_monomial(f,x, N, xeval):
     
     
 
-def eval_lagrange(xeval,xint,yint,N):
+def eval_bary(xeval,xint,yint,N):
 
     lj = np.ones(N+1)
-    
+    w = np.ones(N+1)
     for count in range(N+1):
        for jj in range(N+1):
            if (jj != count):
               lj[count] = lj[count]*(xeval - xint[jj])/(xint[count]-xint[jj])
+              w[count] +=  1/(xint[count]-xint[jj])
 
     yeval = 0.
     
     for jj in range(N+1):
-       yeval = yeval + yint[jj]*lj[jj]
+       yeval = w[jj]*yint[jj]*lj[jj]
   
     return(yeval)
   
@@ -123,8 +124,7 @@ def dividedDiffTable(x, y, n):
  
     for i in range(1, n):
         for j in range(n - i):
-            y[j][i] = ((y[j][i - 1] - y[j + 1][i - 1]) /
-                                     (x[j] - x[i + j]));
+            y[j][i] = ((y[j][i - 1] - y[j + 1][i - 1]) /(x[j] - x[i + j]))
     return y;
     
 def evalDDpoly(xval, xint,y,N):
