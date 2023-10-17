@@ -8,7 +8,7 @@ def driver():
 
     f = lambda x: 1/(1 + (10*x)**2)
 
-    N = 20
+    N = 2
     ''' interval'''
     a = -1
     b = 1
