@@ -52,6 +52,7 @@ def driver():
 
     '''monomial plot'''
     [a, polynomial_eval] = eval_monomial(f, xint, N, xeval)
+    plt.plot(xeval,fex)
     plt.plot(xeval, polynomial_eval, 'o',label = "Monomial Approximation")
     plt.plot(xeval, fex - polynomial_eval, label = "Monomial Error")
     plt.legend()
