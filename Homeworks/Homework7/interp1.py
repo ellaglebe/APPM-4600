@@ -8,7 +8,7 @@ def driver():
 
     f = lambda x: 1/(1 + (10*x)**2)
 
-    N = 2
+    N = 20
     ''' interval'''
     a = -1
     b = 1
@@ -17,7 +17,7 @@ def driver():
    
     ''' create equispaced interpolation nodes'''
     xint = np.linspace(a,b,N+1)
-    xint = np.array([-1+(i-1)*h for i in range(1,N+2)])
+    xint = np.array([np.cos(2*i-1)*np.pi/(2*N) for i in range(1,N+2)])
     
     ''' create interpolation data'''
     yint = f(xint)
@@ -107,12 +107,18 @@ def eval_bary(xeval,xint,yint,N):
        for jj in range(N+1):
            if (jj != count):
               lj[count] = lj[count]*(xeval - xint[jj])/(xint[count]-xint[jj])
-              w[count] +=  1/(xint[count]-xint[jj])
+              w[count] *=  (xint[count]-xint[jj])
+    w = 1/w
 
     yeval = 0.
+    num = 0
+    den = 0
     
     for jj in range(N+1):
-       yeval = w[jj]*yint[jj]*lj[jj]
+        if xeval != xint[jj]:
+            num += w[jj]*yint[jj]/(xeval-xint[jj])
+            den += w[jj]/(xeval-xint[jj])
+    yeval = num/den
   
     return(yeval)
   
