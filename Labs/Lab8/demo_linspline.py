@@ -14,6 +14,7 @@ def driver():
     Neval = 1000
     xeval =  np.linspace(a,b,Neval)
     
+    
     ''' number of intervals'''
     Nint = 20
     
@@ -72,7 +73,32 @@ def  eval_lin_spline(xeval,Neval,a,b,f,Nint):
  
         '''use your line evaluator to evaluate the lines at each of the points in the interval'''
         '''yeval(ind(kk)) = call your line evaluator at xeval(ind(kk)) with the points (a1,fa1) and (b1,fb1)'''
-    return yeval 
+    return yeval
+def eval_Mi(Nint, a, b,f):
+    xint = np.linspace(a,b,Nint+1)
+    hi = (b-a)/Nint
+    V = np.zeros([Nint-1,Nint-1])
+    for i in range(Nint-1):
+        for j in range(Nint-1):
+            if i==j:
+                V[i][j] = 1/3
+            elif abs(i-j) ==1:
+                V[i][j] = 1/12
+    V_inv = inv(V)
+    y = np.zeros([Nint-1,1])
+    for k in range(1,Nint):
+        y[k] = (f(xint[k+1]) -2*f(xint[k])+f(xint[k-1)))/(2*hi**2)
+    Mi = V_inv.dot(y)
+    return Mi
+def eval_cubic(Mi, f):
+    Si = np.zero(Nint-1,1)
+    C = np.zeros(Nint-1,1)
+    D = np.zeros(Nint-1,1)
+    for c in range(Nint-1):
+        C[c] = f(xint[c])/hi-(hi*Mi[c])/6
+        
+    for n in range(
+
            
 if __name__ == '__main__':
       # run the drivers only if this is called from the command line
