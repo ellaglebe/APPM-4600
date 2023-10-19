@@ -23,8 +23,10 @@ def driver():
     '''evaluate the linear spline'''
     yeval = eval_lin_spline(xeval,Neval,a,b,f,Nint)
     Mi = eval_Mi(Nint, a, b,f)
-    S = eval_cubic(a,b,Mi,f,xeval,Nint)
-    print(len(S))
+    S = eval_cubic(a,b,Mi,f,xeval,Nint, Neval)
+
+    
+
     ''' evaluate f at the evaluation points'''
     fex = np.zeros(Neval)
     for j in range(Neval):
@@ -38,7 +40,7 @@ def driver():
 
     plt.figure()
     plt.plot(xeval,fex)
-    plt.plot(xint,S,'o')
+    plt.plot(xeval,S,'o')
     plt.legend()
      
     err = abs(yeval-fex)
@@ -98,23 +100,20 @@ def eval_Mi(Nint, a, b,f):
     y = np.zeros([Nint-1,1])
     for k in range(Nint-1):
         y[k] = (f(xint[k+1]) -2*f(xint[k])+f(xint[k-1]))/(2*hi**2)
-    Mi = np.array(V_inv.dot(y))
+    Mi = V_inv.dot(y)
     return Mi
 
 
-def eval_cubic(a,b,Mi, f, xeval, Nint):
+def eval_cubic(a,b,Mi, f, xeval, Nint, Neval):
     xint = np.linspace(a,b,Nint+1)
     S = np.zeros([Nint-1,1])
     C = np.zeros([Nint-1,1])
     D = np.zeros([Nint-1,1])
-    for jint in range(Nint):
-        ind = np.where((xint[jint]<xeval) & (xint[jint+1]>xeval))
     for c in range(Nint-2):
         hi = xint[c+1]-xint[c]
-        C[c] = f(xint[c])/hi-(hi*Mi[c])/6
-        D[c] = f(xint[c+1])/hi-(hi*Mi[c+1])/6
-    for i in range(Nint-2):
-        S[i] = Mi[i]*((xint[i+1]-xeval[ind[0][i]])**3)/(6*hi)+Mi[i+1]*((xeval[ind[0][i]]-xint[i])**3)/(6*hi)+C[i]*(xint[i+1]-1)+D[i]*(xeval[ind[0][i]]-xint[i])
+        C = f(xint[c])/hi-(hi*Mi[c])/6
+        D = f(xint[c+1])/hi-(hi*Mi[c+1])/6
+        S[c] = Mi[c]*(xint[c+1]-xeval**3)/(6*hi)+Mi[c+1]*((xeval-xint[c])**3)/(6*hi)+C*(xint[c+1]-1)+D*(xeval-xint[c])
     return S
     
 
