@@ -9,6 +9,7 @@ def driver():
     f = lambda x: 1/(1+(10*x)**2)
     a = -1
     b = 1
+   
     
     ''' create points you want to evaluate at'''
     Neval = 1000
@@ -17,10 +18,13 @@ def driver():
     
     ''' number of intervals'''
     Nint = 20
+    xint = np.linspace(a,b,Nint+1)
     
     '''evaluate the linear spline'''
     yeval = eval_lin_spline(xeval,Neval,a,b,f,Nint)
-    
+    Mi = eval_Mi(Nint, a, b,f)
+    S = eval_cubic(a,b,Mi,f,xeval,Nint)
+    print(len(S))
     ''' evaluate f at the evaluation points'''
     fex = np.zeros(Neval)
     for j in range(Neval):
@@ -31,12 +35,18 @@ def driver():
     plt.plot(xeval,fex,'ro-')
     plt.plot(xeval,yeval,'bs-')
     plt.legend()
-    plt.show 
+
+    plt.figure()
+    plt.plot(xeval,fex)
+    plt.plot(xint,S,'o')
+    plt.legend()
      
     err = abs(yeval-fex)
     plt.figure()
     plt.plot(xeval,err,'ro-')
-    plt.show() 
+    plt.show()
+
+    
     
     
 
@@ -50,7 +60,7 @@ def  eval_lin_spline(xeval,Neval,a,b,f,Nint):
     xint = np.linspace(a,b,Nint+1)
    
     '''create vector to store the evaluation of the linear splines'''
-    yeval = np.zeros(Neval) 
+    yeval = np.zeros(Neval)
     
 
 
@@ -86,18 +96,27 @@ def eval_Mi(Nint, a, b,f):
                 V[i][j] = 1/12
     V_inv = inv(V)
     y = np.zeros([Nint-1,1])
-    for k in range(1,Nint):
-        y[k] = (f(xint[k+1]) -2*f(xint[k])+f(xint[k-1)))/(2*hi**2)
-    Mi = V_inv.dot(y)
+    for k in range(Nint-1):
+        y[k] = (f(xint[k+1]) -2*f(xint[k])+f(xint[k-1]))/(2*hi**2)
+    Mi = np.array(V_inv.dot(y))
     return Mi
-def eval_cubic(Mi, f):
-    Si = np.zero(Nint-1,1)
-    C = np.zeros(Nint-1,1)
-    D = np.zeros(Nint-1,1)
-    for c in range(Nint-1):
+
+
+def eval_cubic(a,b,Mi, f, xeval, Nint):
+    xint = np.linspace(a,b,Nint+1)
+    S = np.zeros([Nint-1,1])
+    C = np.zeros([Nint-1,1])
+    D = np.zeros([Nint-1,1])
+    for jint in range(Nint):
+        ind = np.where((xint[jint]<xeval) & (xint[jint+1]>xeval))
+    for c in range(Nint-2):
+        hi = xint[c+1]-xint[c]
         C[c] = f(xint[c])/hi-(hi*Mi[c])/6
-        
-    for n in range(
+        D[c] = f(xint[c+1])/hi-(hi*Mi[c+1])/6
+    for i in range(Nint-2):
+        S[i] = Mi[i]*((xint[i+1]-xeval[ind[0][i]])**3)/(6*hi)+Mi[i+1]*((xeval[ind[0][i]]-xint[i])**3)/(6*hi)+C[i]*(xint[i+1]-1)+D[i]*(xeval[ind[0][i]]-xint[i])
+    return S
+    
 
            
 if __name__ == '__main__':
