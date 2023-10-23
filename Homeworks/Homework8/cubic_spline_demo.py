@@ -7,19 +7,19 @@ from numpy.linalg import norm
 
 def driver():
     
-    f = lambda x: 1/(1+x**2)
-    fp = lambda x: -2*x/(1.+x**2)**2
-    a = -5
-    b = 5
+    f = lambda x: np.sin(10*x)
+    fp = lambda x: 10*np.cos(10*x)
+    a = 0
+    b = 2*np.pi
     
     ''' create points you want to evaluate at'''
     Neval = 1000
     xeval =  np.linspace(a,b,Neval+1)
     
     ''' number of intervals'''
-    Nint = 20
-    #xint = np.linspace(a,b,Nint+1)
-    xint = np.array([-5*np.cos((2*i-1)*np.pi/(Nint*2)) for i in range(1,Nint+2)])
+    Nint = 5
+    xint = np.linspace(a,b,Nint+1)
+    #xint = np.array([-5*np.cos((2*i-1)*np.pi/(Nint*2)) for i in range(1,Nint+2)])
     yint = f(xint)
     yintp = fp(xint)
     
