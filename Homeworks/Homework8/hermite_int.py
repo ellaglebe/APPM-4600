@@ -16,6 +16,7 @@ def driver():
    
     ''' create equispaced interpolation nodes'''
     xint = np.linspace(a,b,N+1)
+    xint = np.array([-5*np.cos((2*j-1)*np.pi/(2*N)) for j in range(1,N+2)])
     
     ''' create interpolation data'''
     yint = np.zeros(N+1)
@@ -42,7 +43,7 @@ def driver():
     plt.figure()
     plt.plot(xeval,fex,'ro-', label = 'f(x)')
     plt.plot(xeval,yevalL,'bs--',label='Lagrange') 
-    plt.plot(xeval,yevalH,'c.--',label='Hermite')
+    #plt.plot(xeval,yevalH,'c.--',label='Hermite')
     plt.semilogy()
     plt.legend()
     plt.show()
@@ -51,7 +52,7 @@ def driver():
     errH = abs(yevalH-fex)
     plt.figure()
     plt.semilogy(xeval,errL,'bs--',label='Lagrange')
-    plt.semilogy(xeval,errH,'c.--',label='Hermite')
+    #plt.semilogy(xeval,errH,'c.--',label='Hermite')
     plt.legend()
     plt.show()            
 
