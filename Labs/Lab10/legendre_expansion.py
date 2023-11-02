@@ -7,7 +7,7 @@ from scipy.integrate import quad
 def driver():
 
 #  function you want to approximate
-    f = lambda x: math.exp(x)
+    f = lambda x: 1/(1+x**2)
 
 # Interval of interest    
     a = -1
