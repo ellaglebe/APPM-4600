@@ -1,20 +1,22 @@
 import numpy as np
 import numpy.linalg as la
 import matplotlib.pyplot as plt
-
+from scipy import integrate
 
 def driver():
 
-    f = lambda x: x**3
+    f = lambda x: 1/(1+x**2)
       
     a= -5
     b = 5
-    n = 20
+    n1 = 205
+    n2 =61
     
-    xint =np.linspace(a,b)
+    
+    xint =np.linspace(a,b,n1)
     yint = f(xint)
     h = xint[1]-xint[0]
-    xint2 = np.linspace(a,b,(n*2)+1)
+    xint2 = np.linspace(a,b,n2)
     yint2 = f(xint2)
     h2 = xint2[1]-xint2[0]
     
@@ -24,7 +26,8 @@ def driver():
     Tn = trap(xint,yint,N,h)
     Sn = simp(xint2,yint2,N2,h2)
     print(Tn,Sn)
-    
+
+    print(integrate.quad(f,a,b))
     # test the different evaluation methods
     Neval = 1000
     xeval = np.linspace(a,b,N)     
